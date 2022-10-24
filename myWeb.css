@@ -1,0 +1,763 @@
+:root{
+    --purple: #9370DB;
+    --yellow: rgb(233, 217, 0);
+    --border: .1rem solid rgba(0, 0, 0, 0.3);
+    --gradient: linear-gradient(135deg, 
+                rgb(156, 214, 255), 
+                rgb(139, 182, 255), 
+                rgb(172, 172, 255), 
+                rgb(179, 161, 244), 
+                rgb(218, 172, 255), 
+                rgb(243, 172, 255), 
+                rgb(255, 255, 200), 
+                rgb(255, 255, 253)
+                );
+    --twice: rgb(255, 95, 162);
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.3%;
+}
+
+body{
+    background: ghostwhite;
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+section:nth-child(3){
+    padding-top: 6rem;
+}
+
+.heading{
+    text-align: center;
+    color: var(--yellow);
+    text-transform: uppercase;
+    padding: 3rem 0 3.5rem 0;
+    font-size: 3rem;
+}
+
+.heading span{
+    color: cornflowerblue;
+    text-transform: uppercase;
+}
+
+.heading_icon{
+    color: cornflowerblue;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0 2rem 0;
+}
+
+.heading_project{
+    display: flex;
+    justify-content: center;
+}
+
+.heading_project h1{
+    color: var(--purple);
+    font-size: 2.5rem;
+    border-bottom: 0.2rem solid var(--yellow);
+    padding-bottom: .3rem;
+    margin-bottom: 2.3rem;
+}
+
+.explain_project{
+    color: dimgray;
+    padding: 2rem;
+    background: lavender;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-top: 14px;
+}
+
+.explain_project p{
+    margin-bottom: 10px;
+}
+
+.header{
+    background: ghostwhite;
+    padding: 1.3rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo i{
+    font-size: 3rem;
+    color: cornflowerblue;
+}
+
+.header .navbar a{
+    margin: 0 .9rem;
+    font-size: 1.5rem;
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.header .navbar a:last-child{
+    margin-right: 0;
+}
+
+.header .navbar a:hover{
+    color: var(--purple);
+    border-bottom: 0.15rem solid cornflowerblue;
+    padding-bottom: .3rem;
+}
+
+.header .icon div{
+    color: cornflowerblue;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.header .icon div:hover{
+    color: var(--purple);
+}
+
+#menu-btn{
+    display: none;
+}
+
+/* section */
+
+.section{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+}
+
+.section .bg{
+    background-image: var(--gradient);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 400%;
+    animation: bg-animation 7s linear 1.5s infinite alternate;
+}
+
+.section .home{
+    position: absolute;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.section .home .content{
+    max-width: 60rem;
+}
+
+.section .home .content h3{
+    color: white;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: none;
+}
+
+.section .home .content h1{
+    color: var(--purple);
+    font-size: 7rem;
+    text-transform: uppercase;
+}
+
+.section .home .content h2{
+    color: var(--purple);
+    font-size: 5rem;
+    padding-bottom: 2rem;
+}
+
+.section .home .content h3 span{
+    color: var(--yellow);
+}
+
+.section .home .content:hover{
+    text-shadow: 2px -2px 7px cornflowerblue,
+                 -2px 2px 7px palevioletred, 
+                 0 0 3px white, 
+                 0 0 10px white, 
+                 0 0 15px white, 
+                 0 0 20px white;
+                }
+                
+.section .home .content .blink:hover{
+    animation: blink .2s ease-in .4s 2;
+}
+
+/* about */
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: lavender;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2.5rem;
+}
+
+.about .row .content h3{
+    color: var(--purple);
+    font-size: 2.3rem;
+    padding-bottom: 1.5rem;
+}
+
+.about .row .content p{
+    color: black;
+    font-size: 1.53rem;
+    opacity: .7;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+/* internship */
+
+.internship{
+    background: whitesmoke;
+}
+
+.internship ul.grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.internship ul.grid li{
+    padding: 7px;
+    height: 350px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+}
+
+.internship ul.grid li:first-child{
+    padding-top: 0;
+    padding-left: 0;
+}
+    
+.internship ul.grid li:nth-child(2){
+    padding-top: 0;
+    padding-right: 0;
+}
+
+.internship ul.grid li:nth-child(3){
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.internship ul.grid li:last-child{
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.internship .grid li.small{
+    flex-basis: 40%;
+}
+
+.internship .grid li.large{
+    flex-basis: 60%;
+}
+
+.internship .explain_internship p{
+    color: dimgray;
+    padding: 2rem;
+    background: lavender;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-top: 14px;
+}
+
+.internship .explain_internship p span{
+    color: indigo;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.internship .explain_internship p span.proen{
+    color: crimson;
+    text-transform: uppercase;
+} 
+
+.internship .explain_internship p span.proen-{
+    color:midnightblue;
+}
+
+.internship ul.grid_project_internship{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.internship ul.grid_project_internship li{
+    padding: 7px;
+    height: 330px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+}
+
+.internship ul.grid_project_internship li:first-child{
+    padding-top: 0;
+    padding-left: 0;
+}
+    
+.internship ul.grid_project_internship li:nth-child(2){
+    padding-top: 0;
+    padding-right: 0;
+}
+
+.internship ul.grid_project_internship li:nth-child(3){
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.internship ul.grid_project_internship li:last-child{
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.internship .grid_project_internship li.small{
+    flex-basis: 50%;
+}
+
+.internship .grid_project_internship li.large{
+    flex-basis: 50%;
+}
+
+.internship .explain_project p span{
+    text-transform: none;
+}
+
+/* mini project */
+
+.mini_project .box-contrainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.mini_project .box{
+    width: 100%;
+    height: 37rem;
+    overflow: hidden;
+}
+
+.mini_project .box div{
+    background: #9370DB;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mini_project .box div.in{
+    background-image: url(pic/lineProject_1.jpg);
+    background-size: cover;
+    filter: brightness(90%) contrast(120%);
+}
+
+.mini_project .box div.in:hover{
+    background-image: url(pic/lineProject_1.gif);
+}
+
+.mini_project .box div.out{
+    background-image: url(pic/lineProject_2.jpg);
+    background-size: cover;
+    filter: brightness(130%);
+}
+
+.mini_project .box div.out:hover{
+    background-image: url(pic/lineProject_2.gif);
+}
+
+.mini_project .box div.line{
+    background-image: url(pic/lineProject_3.png);
+    background-size: cover;
+}
+
+.mini_project .binary{
+    background: gainsboro;
+    display: flex;
+    flex-direction: column;
+}
+
+.mini_project .binary .image{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mini_project .binary .image div{
+    background-image: #9370DB;
+    width: 100%;
+    height: 29rem;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.mini_project .binary .image div.binary_1{
+    background-image: url(pic/binary_4bit_1.jpg);
+    flex-basis: 37%;
+    padding: 1rem .5rem 0 1rem;
+}
+
+.mini_project .binary .image div.binary_2{
+    background-image: url(pic/binary_4bit_2.jpg);
+    flex-basis: 63%;
+    padding: 1rem 1rem 0 .5rem;
+}
+
+.mini_project .binary .image div.binary_2:hover{
+    background-image: url(pic/binary_4bit_2.gif);
+}
+
+.mini_project .binary .explain_project{
+    background: none;
+    padding: 1.5rem 2.5rem;
+}
+
+.mini_project .elevator .row{
+    background: lightcyan;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mini_project .elevator .row .image{
+    display: flex;
+    width: 100%;
+    height: 45rem;
+    flex: 1 1 60rem;
+}
+
+.mini_project .elevator .row .image img{
+    width: 50%;
+    object-fit: cover;
+    padding: .5rem;
+}
+
+.mini_project .elevator .row .explain_elevator{
+    flex: 1 1 30rem;
+    margin: 2rem 3rem 3rem 2.5rem;
+}
+
+.mini_project .elevator .row .explain_elevator p{
+    color: black;
+    background: lavender;
+    font-size: 1.53rem;
+    opacity: .7;
+    line-height: 1.5;
+    padding: 3rem 5rem;
+}
+
+.mini_project .elevator .row .explain_elevator .heading_icon{
+    font-size: 4rem;
+    color: var(--purple);
+    margin-bottom: 0;
+}
+
+/* activity */
+
+.activity .row{
+    display: flex;
+    align-items: center;
+    background: honeydew;
+    flex-wrap: wrap;
+}
+
+.activity .row .image{
+    flex: 1 1 45rem;
+}
+
+.activity .row .image img{
+    width: 100%;
+}
+
+.activity .row .content{
+    flex: 1 1 45rem;
+    padding: 2.5rem;
+}
+
+.activity .row .content h3{
+    color: darkslategrey;
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.activity .row .content p{
+    color: black;
+    font-size: 1.53rem;
+    opacity: .7;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+.activity .row .content p:nth-child(3){
+    padding-bottom: 0;
+}
+
+.activity .row .content .heading_icon{
+    margin-top: 3rem;
+}
+
+.activity .row .content .heading_icon i{
+    color: seagreen;
+    padding: 0 .5rem;
+
+}
+
+.activity .part-time ul.grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.activity .part-time ul.grid li{
+    flex-basis: 33%;
+    padding: 7px;
+    height: 23rem;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    background-color: cornflowerblue;
+}
+
+.activity .part-time ul.grid li:first-child{
+    padding-left: 0;
+}
+
+.activity .part-time ul.grid li:last-child{
+    padding-right: 0;
+}
+
+.activity .part-time .explain_project{
+    background: rgb(219, 234, 255);
+    padding: 2rem 4rem;
+    margin-bottom: 3rem;
+}
+
+.activity .part-time .explain_project h3{
+    color: var(--purple);
+    font-size: 3rem;
+    text-align: center;
+    padding: 1.7rem;
+}
+
+.activity .part-time .explain_project p span{
+    color: var(--twice);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* footer */
+
+.footer{
+    background: cornflowerblue;
+    text-align: center;
+}
+
+.footer h1{
+    color: white;
+    font-size: 3rem;
+    padding: 1.5rem 0;
+}
+
+.footer p{
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    text-transform: none;
+}
+
+.footer p span{
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.footer .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .icon .star i{
+    color: var(--yellow);
+    font-size: 2rem;
+    transform: rotate(13deg);
+}
+
+.footer .icon i{
+    color: white;
+    padding: 0 .3rem;
+}
+
+/* animation */
+
+@keyframes bg-animation{
+    0%{background-position: left}
+    100%{background-position: right}
+}
+
+@keyframes blink{
+    50%{
+        opacity: 0;
+    }
+    80%{
+        opacity: .8;
+    }
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1100px){
+    .about .row .content p{
+        font-size: 1.33rem;
+    }
+}
+
+@media only screen and (max-width: 1040px){
+    .about .row .content p{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 780px){
+    
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 101%;
+        right: -100%;
+        background: white;
+        width: 30rem;
+        height: calc(55vh - 9.5rem);
+        transition: .5s linear;
+    }
+
+    
+    .header .navbar.active{
+        right: 0;
+    }
+    
+    .header .navbar a{
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .activity .part-time ul.grid li{
+        height: 50rem;
+        flex-basis: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 650px){
+    
+    .internship .grid li.small,
+    .internship .grid li.large{
+        flex-basis: 100%;
+    }
+    
+    .internship .grid_project_internship li.small,
+    .internship .grid_project_internship li.large{
+        flex-basis: 100%;
+    }
+
+    .mini_project .binary .image div.binary_1,
+    .mini_project .binary .image div.binary_2{
+        flex-basis: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+
+    html{
+        font-size: 43%;
+    }
+
+}
+
+@media only screen and (max-width: 330px){
+
+    html{
+        font-size: 37%;
+    }
+    
+    .section .home .content h1{
+        font-size: 5.5rem;
+    }
+
+    .section .home .content h2{
+        font-size: 4rem;
+    }
+
+}
